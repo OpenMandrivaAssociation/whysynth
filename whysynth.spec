@@ -26,6 +26,7 @@ flexible modulation and mixdown options, plus effects.
 
 %prep 
 %setup -q  
+autoreconf -i
 
 %build 
 %configure 
@@ -50,3 +51,6 @@ rm -rf %{buildroot}
 #%{_datadir}/%{name}/version_20051005_patches.WhySynth
 #%{_datadir}/%{name}/version_20051231_patches.WhySynth
 
+%changelog
+* Mon Dec 18 2009 Frank Kober <emuse@mandriva.org> 20090608-1mdv2010.1
+- import whysynth
