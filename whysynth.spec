@@ -26,9 +26,9 @@ flexible modulation and mixdown options, plus effects.
 
 %prep 
 %setup -q  
-autoreconf -i
 
 %build 
+autoreconf -i
 %configure 
 %make
 
