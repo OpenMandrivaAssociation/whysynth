@@ -1,6 +1,6 @@
 %define name    whysynth
 %define version 20090608
-%define release %mkrel 1 
+%define release %mkrel 2
 
 Name:           %{name} 
 Summary:        Advanced synthesizer DSSI plugin
