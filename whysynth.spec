@@ -1,6 +1,6 @@
 %define name    whysynth
-%define version 20090608
-%define release %mkrel 2
+%define version 20100922
+%define release %mkrel 1
 
 Name:           %{name} 
 Summary:        Advanced synthesizer DSSI plugin
@@ -28,8 +28,7 @@ flexible modulation and mixdown options, plus effects.
 %setup -q  
 
 %build 
-autoreconf -i
-%configure 
+%configure2_5x
 %make
 
 %install
