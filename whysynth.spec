@@ -1,33 +1,32 @@
-%define name    whysynth
-%define version 20100922
-%define release %mkrel 1
-
-Name:           %{name} 
+Name:           whysynth
 Summary:        Advanced synthesizer DSSI plugin
-Version:        %{version} 
-Release:        %{release}
+Version:        20100922
+Release:        2
 
 Source:         http://smbolton.com/%{name}/%{name}-%{version}.tar.bz2
 URL:            http://smbolton.com/%{name}.html
 License:        GPLv2
 Group:          Sound
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot 
-BuildRequires:  dssi-devel gtk2-devel liblo-devel alsa-lib-devel
-BuildRequires:  ladspa-devel fftw-devel
+BuildRequires:  pkgconfig(dssi)
+BuildRequires:  pkgconfig(gtk+-2.0)
+BuildRequires:  pkgconfig(liblo)
+BuildRequires:  pkgconfig(alsa)
+BuildRequires:  ladspa-devel
+BuildRequires:  fftw-devel
 
 
 %description
 WhySynth is a versatile softsynth which operates as a plugin for the
-DSSI Soft Synth Interface. Some of its features are 4 oscillators, 2 
-filters, 3 LFOs, and 5 envelope generators per voice, 10 oscillator 
-modes: minBLEP, wavecycle, asynchronous granular, three FM modes, 
-waveshaper, noise, PADsynth, and phase distortion, 6 filter modes, 
+DSSI Soft Synth Interface. Some of its features are 4 oscillators, 2
+filters, 3 LFOs, and 5 envelope generators per voice, 10 oscillator
+modes: minBLEP, wavecycle, asynchronous granular, three FM modes,
+waveshaper, noise, PADsynth, and phase distortion, 6 filter modes,
 flexible modulation and mixdown options, plus effects.
 
-%prep 
-%setup -q  
+%prep
+%setup -q
 
-%build 
+%build
 %configure2_5x
 %make
 
@@ -35,21 +34,9 @@ flexible modulation and mixdown options, plus effects.
 rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
 
-%clean
-rm -rf %{buildroot}
-
 %files
 %defattr(-,root,root)
 %doc README COPYING AUTHORS
 %{_libdir}/dssi/%{name}.so
-%{_libdir}/dssi/%{name}.la
 %{_libdir}/dssi/%{name}/WhySynth_gtk
 %{_datadir}/%{name}
-#%{_datadir}/%{name}/current_default_patches.WhySynth
-#%{_datadir}/%{name}/more_K4_interpretations.WhySynth
-#%{_datadir}/%{name}/version_20051005_patches.WhySynth
-#%{_datadir}/%{name}/version_20051231_patches.WhySynth
-
-%changelog
-* Mon Dec 18 2009 Frank Kober <emuse@mandriva.org> 20090608-1mdv2010.1
-- import whysynth
