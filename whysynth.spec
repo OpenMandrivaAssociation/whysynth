@@ -1,7 +1,7 @@
 Name:           whysynth
 Summary:        Advanced synthesizer DSSI plugin
-Version:        20100922
-Release:        2
+Version:        20120903
+Release:        1
 
 Source:         http://smbolton.com/%{name}/%{name}-%{version}.tar.bz2
 URL:            http://smbolton.com/%{name}.html
