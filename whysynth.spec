@@ -40,3 +40,30 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/dssi/%{name}.so
 %{_libdir}/dssi/%{name}/WhySynth_gtk
 %{_datadir}/%{name}
+
+
+%changelog
+* Wed Sep 05 2012 Frank Kober <emuse@mandriva.org> 20120903-1
++ Revision: 816410
+- new version 20120903
+
+* Fri Apr 27 2012 Frank Kober <emuse@mandriva.org> 20100922-2
++ Revision: 793823
+- rebuild, spec cleanup
+
+* Sat Sep 25 2010 Frank Kober <emuse@mandriva.org> 20100922-1mdv2011.0
++ Revision: 581022
+- new version 20100922 (new waveform, knobs)
+
+* Mon Dec 21 2009 Stéphane Téletchéa <steletch@mandriva.org> 20090608-2mdv2010.1
++ Revision: 480588
+- Move autoconf command n the build section
+
+* Fri Dec 18 2009 Frank Kober <emuse@mandriva.org> 20090608-1mdv2010.1
++ Revision: 480032
+- Update rpm group tag
+- import whysynth
+
+
+* Mon Dec 18 2009 Frank Kober <emuse@mandriva.org> 20090608-1mdv2010.0
+- import whysynth
