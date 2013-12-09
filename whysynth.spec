@@ -1,3 +1,5 @@
+%define _disable_ld_no_undefined 1
+
 Name:           whysynth
 Summary:        Advanced synthesizer DSSI plugin
 Version:        20120903
