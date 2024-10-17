@@ -6,7 +6,7 @@ Version:        20120903
 Release:        2
 
 Source:         http://smbolton.com/%{name}/%{name}-%{version}.tar.bz2
-URL:            http://smbolton.com/%{name}.html
+URL:            https://smbolton.com/%{name}.html
 License:        GPLv2
 Group:          Sound
 BuildRequires:  pkgconfig(dssi)
