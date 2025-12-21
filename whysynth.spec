@@ -8,6 +8,11 @@ License:	GPLv2+
 Group:	Sound
 Url:	https://smbolton.com/whysynth.html
 Source0:	https://smbolton.com/whysynth/%{name}-%{version}.tar.bz2
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  ladspa-devel
 BuildRequires:  pkgconfig(alsa)
 BuildRequires:  pkgconfig(cairo)
